@@ -105,7 +105,7 @@ float Adafruit_INA3221::getShuntVoltage(uint8_t channel) {
 
   // Convert raw value to voltage
   float voltage =
-      (float)rawValue * 5e-6; // Drop bottom 3 bits(divide by 8) and multiply by 40uV 
+      rawValue * 5.0e-6; // Drop bottom 3 bits(divide by 8) and multiply by 40uV
 
   return voltage;
 }
